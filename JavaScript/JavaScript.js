@@ -1,3 +1,23 @@
+const WEEK = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+function updateTime() {
+    var now = new Date();
+
+    document.getElementById('Time').innerText = 
+             zeroPadding(now.getHours(), 2) + ':' + 
+             zeroPadding(now.getMinutes(), 2) + ':' + 
+             zeroPadding(now.getSeconds(), 2); 
+    document.getElementById('date').innerText =
+            now.getFullYear() + '-' +
+            zeroPadding(now.getMonth() + 1, 2) + '-' +
+            zeroPadding(now.getDate(), 2)+' '+
+            WEEK[now.getDay()];
+}
+updateTime();
+setInterval(updateTime, 1000);
+
+function zeroPadding(num, digit) {
+    return String(num).padStart(digit, '0');
+}
 document.addEventListener("DOMContentLoaded", function() {
     // Seleccionar todos los elementos con la clase '.item'
     const items = document.querySelectorAll('.item');
