@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round"); /* Importamos la fuente personalizada */
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css"); /* Importamos la librería de iconos FontAwesome */
+
+
+/* Aplicamos un reset básico para eliminar márgenes y paddings predeterminados */
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente para todo el texto */
+    background-color: #f4f4f4; /* Color de fondo */
+    padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+/* Estilo para el contenedor que agrupa las tarjetas */
+.container {
+    display: grid; /* Utiliza grid para organizar las tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Define las columnas del grid, ajustando el tamaño automáticamente */
+    gap: 20px; /* Espacio entre las tarjetas */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centra el contenedor */
+}
+
+/* Estilo para cada tarjeta */
+.item {
+    background-color: #fff; /* Fondo blanco para todas las tarjetas */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+/* Efecto al pasar el ratón sobre la tarjeta */
+.item:hover {
+    transform: translateY(-5px); /* Mueve ligeramente la tarjeta hacia arriba */
+}
+
+/* Estilo para el título de cada tarjeta */
+.item h3 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+    font-size: 18px; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+}
+
+/* Estilo para los párrafos dentro de las tarjetas */
+.item p {
+    font-size: 14px; /* Tamaño de la fuente */
+    color: #666; /* Color del texto */
+    margin-bottom: 15px; /* Espacio debajo del párrafo */
+}
+
+/* Estilo para el ícono dentro de la tarjeta */
+.item span {
+    font-size: 30px; /* Tamaño del ícono */
+    color: #000; /* Color del ícono */
+    display: block; /* Hace que el ícono ocupe toda la línea */
+    margin-bottom: 10px; /* Espacio debajo del ícono */
+}
+
+/* Estilo para los subtítulos dentro de las tarjetas */
+.item h4 {
+    font-size: 16px; /* Tamaño de la fuente */
+    color: #222; /* Color del texto */
+    font-weight: bold; /* Hace el texto en negrita */
+}
+/* Configuración del cuerpo de la página */
+body, html{
+    font-family: "Varela Round", sans-serif; /* Fuente personalizada */
+    background-color: #f5f5f5; /* Color de fondo */
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Mínima altura de la pantalla */
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Para asegurar que las tarjetas se distribuyan en varias filas */
+    justify-content: space-between;
+}
+
+.card {
+    margin: 10px;
+    width: 400px; /* Tamaño fijo para cada tarjeta */
+    height: 500px; /* Altura fija para cada tarjeta */
+    border: 5px solid grey;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para permitir la superposición del texto sobre la imagen */
+    overflow: hidden; /* Para evitar que el contenido se desborde fuera de la tarjeta */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la tarjeta */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que los elementos se distribuyan correctamente */
+}
+.card .content {
+    position: relative;
+    z-index: 3; /* Asegura que el texto esté sobre la imagen */
+    color: black; /* Color de texto en negro */
+    text-align: center; /* Centrar el texto */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.container {
+    display: flex; /* Usamos flexbox para organizar las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en múltiples filas */
+    gap: 40px; /* Espaciado entre tarjetas */
+    justify-content: center; /* Centramos los elementos */
+    padding: 20px; /* Espaciado alrededor del contenedor */
+}
+
+/* TARJETA PRINCIPAL */
+
+
+.item {
+    --color: #f65206; /* Variable de color que cambiará dinámicamente */
+    width: 300px;
+    height: 350px;
+    background-color: #fff; /* Fondo blanco */
+    /*background-image: url('../img/C++.png'); /* Reemplaza con la ruta de la imagen */
+    background-size: contain; /* Ajusta la imagen a la tarjeta */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    position: relative; /* Necesario para posicionar elementos internos */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    display: flex;/* Usamos Flexbox para centrar el contenido dentro de la tarjeta */
+    flex-direction: column; /* Alinea el contenido en una columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100%; /* Asegura que la tarjeta ocupe toda la altura disponible */
+    
+}
+
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.item:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 1); /* Sombra más intensa */
+}
+
+/* EFECTO VISUAL EN ESQUINA SUPERIOR */
+
+.item::after {
+    content: ""; /* Elemento decorativo */
+    position: absolute;
+    top: 8px;
+    left: 0;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--color); /* Triángulo de color */
+    border-width: 40px;
+    filter: drop-shadow(5px 0 4px rgba(0, 0, 0, 1)); /* Sombra del triángulo */
+    transition: filter 0.3s ease;
+}
+
+/* Suavizamos el efecto de sombra al pasar el mouse */
+.item:hover::after {
+    filter: drop-shadow(5px 0 4px rgba(0, 0, 0, 0.1));
+}
+/* Estilo para las tarjetas con imágenes de fondo */
+.item:nth-child(1) {
+    background-image: url('../img/html5.png'); /* Imagen para la tarjeta 1 */
+    background-size: contain; /* Ajusta la imagen a la tarjeta */
+    background-position: center;
+}
+
+.item:nth-child(2) {
+    background-image: url('../img/Css.png'); /* Imagen para la tarjeta 2 */
+    background-size: contain; /* Ajusta la imagen a la tarjeta */
+    background-position: center;
+}
+
+.item:nth-child(3) {
+    background-image: url('../img/Js.png'); /* Imagen para la tarjeta 3 */
+    background-size: contain; /* Ajusta la imagen a la tarjeta */
+    background-position: center;
+}
+
+.item:nth-child(4) {
+    background-image: url('../img/framework.png'); /* Imagen para la tarjeta 4 */
+    background-size: contain; /* Ajusta la imagen a la tarjeta */
+    background-position: center;
+}
+
+.item:nth-child(5) {
+    background-image: url('../img/php.png'); /* Imagen para la tarjeta 5 */
+    background-size: contain; /* Ajusta la imagen a la tarjeta */
+    background-position: center;
+}
+
+.item:nth-child(6) {
+    background-image: url('../img/sql.png'); /* Imagen para la tarjeta 6 */
+    background-size: contain; /* Ajusta la imagen a la tarjeta */
+    background-position: center;
+}
+
+.item:nth-child(7) {
+    background-image: url('../img/python.png'); /* Imagen para la tarjeta 7 */
+    background-size: contain; /* Ajusta la imagen a la tarjeta */
+    background-position: center;
+}
+
+.item:nth-child(8) {
+    background-image: url('../img/java.png'); /* Imagen para la tarjeta 8 */
+    background-size: contain; /* Ajusta la imagen a la tarjeta */
+    background-position: center;
+}
+
+.item:nth-child(9) {
+    background-image: url('../img/C++.png'); /* Imagen para la tarjeta 9 */
+    background-size: contain; /* Ajusta la imagen a la tarjeta */
+    background-position: center;
+}
+
+
+/* CONTENIDO INTERNO DE LA TARJETA */
+.layer {
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    position: relative; /* Posición relativa para efectos */
+    transition: transform 0.3s ease;
+    display: flex; /* Usamos flexbox para centrar el contenido */
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100%; /* Asegura que ocupe todo el espacio disponible */
+    text-align: center; /* Centra el texto */
+}
+
+/* Efecto de desplazamiento al pasar el mouse */
+.item:hover .layer {
+    transform: translateX(15px); /* Mueve el contenido interno hacia la derecha */
+}
+
+/* TEXTOS */
+
+/* Títulos */
+h3 {
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrado */
+    color: var(--color); /* Color dinámico */
+}
+
+h4 {
+    margin: 0;
+    color: #fff; /* Texto en blanco */
+    text-align: center;
+    font-size: 14px; /* Tamaño más pequeño */
+    padding-top: 10px; /* Espaciado superior */
+}
+
+/* Texto del párrafo */
+p {
+    color: #666; /* Color gris oscuro */
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ÍCONO DENTRO DE LA TARJETA */
+/* Estilo del ícono dentro de la tarjeta (botón) */
+span {
+    width: 40px; /* Tamaño del ícono */
+    height: 40px; /* Tamaño del ícono */
+    color: #fff; /* Color blanco para el ícono */
+    background-color: var(--color); /* Fondo del ícono, color dinámico */
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    justify-content: center; /* Centra el ícono horizontalmente */
+    align-items: center; /* Centra el ícono verticalmente */
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    font-size: 25px; /* Tamaño del ícono */
+    position: absolute;
+    padding: 7px; /* Espaciado interno */
+    right: 16px; /* Alineación con el borde derecho */
+    bottom: 8px; /* Alineación con el borde inferior */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover: resaltar el ícono */
+span:hover {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el ratón */
+    background-color: #ffffff; /* Cambia el fondo cuando se pasa el ratón */
+}
+
+/* Efecto de clic (active) sobre el ícono */
+span:active {
+    transform: scale(1); /* Devuelve el tamaño a su estado original */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Vuelve la sombra al estado inicial */
+}
+
+
+/* COLORES DINÁMICOS PARA CADA TARJETA */
+
+/* Se aplica un color diferente a cada tarjeta según su posición */
+.item:nth-child(1) { --color: #f65206; }
+.item:nth-child(2) { --color: #0b0bef; }
+.item:nth-child(3) { --color: #e4f40b; }
+.item:nth-child(4) { --color: #f90606; }
+.item:nth-child(5) { --color: #9e0bf3; }
+.item:nth-child(6) { --color: #ec6d06; }
+.item:nth-child(7) { --color: #0b71ef; }
+.item:nth-child(8) { --color: #fd0404; }
+.item:nth-child(9) { --color: #0648f1; }
+
+/* RESPONSIVIDAD (ADAPTABILIDAD A PANTALLAS PEQUEÑAS) */
+
+
+@media (max-width: 768px) {
+    .container {
+        gap: 20px; /* Reduce el espacio entre tarjetas en tablets */
+    }
+}
+
+@media (max-width: 350px) {
+    .container {
+        flex-direction: column; /* Acomoda las tarjetas en una sola columna */
+        align-items: center; /* Centra los elementos */
+    }
+}
